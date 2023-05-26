@@ -87,6 +87,9 @@ bool doubleleLinkedList::deletNode(int rollNo) {
     delete current; //step 4
     return true;
 }
+bool doubleleLinkedList::listEmpty() {
+    return (START == NULL);
+}
 int main()
 {
     std::cout << "Hello World!\n";
