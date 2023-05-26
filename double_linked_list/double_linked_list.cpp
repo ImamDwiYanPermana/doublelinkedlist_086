@@ -30,6 +30,10 @@ void doubleleLinkedList::addNode() {
     cin >> nim;
     cout << "\n enter the name of student: ";
     cin >> nm;
+
+    Node* newNode = new Node(); // step1
+    newNode->noMhs = nim;//step 2
+    newNode->name = nm;//step 2
 }
 
 int main()
