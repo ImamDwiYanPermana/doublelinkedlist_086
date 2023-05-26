@@ -108,15 +108,21 @@ void doubleleLinkedList::revtraverse(){
     }
     else {
         cout << "\nRecords in descending order of roll number are: " << endl;
-        node* currentnode = START;
-        while (currentnode->next != NULL)
-            currentnode = currentnode->next;
-        while (currentnode != NULL) {
-            cout << currentnode->noMhs << " " << currentnode->name << endl;
-            currentnode = currentnode->prev;
+        Node* currentNode = START;
+        while (currentNode->next != NULL)
+            currentNode = currentNode->next;
+        while (currentNode != NULL) {
+            cout << currentNode->noMhs << " " << currentNode->name << endl;
+            currentNode = currentNode->prev;
         }
     }
+
 }
+void doubleleLinkedList::hapus() {
+    if (listEmpty()) {
+        cout << "\nList is empty" << endl;
+
+    }
 int main()
 {
     std::cout << "Hello World!\n";
