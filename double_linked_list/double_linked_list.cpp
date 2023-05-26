@@ -62,6 +62,16 @@ void doubleleLinkedList::addNode() {
         current->next->prev = newNode;//step 6
     current->next = newNode;// step 7
 }
+
+bool doubleleLinkedList::search(int rollNo, Node** previouse, Node** current) {
+    *previouse = NULL; // step 1.a
+    *current = START; // 1.b
+    while (*current != NULL && (*current)->noMhs != rollNo) {
+        *previouse = *current;
+        *current = (*current)->next;
+    }
+    return (*current != NULL)
+}
 int main()
 {
     std::cout << "Hello World!\n";
