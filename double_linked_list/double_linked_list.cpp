@@ -16,7 +16,7 @@ private:
 public:
     void addNode();
     bool search(int tollNo, Node** previouse, Node** current);
-    bool deletNode(int roolNo);
+    bool deletNode(int rollNo);
     bool listEmpty();
     void traverse();
     void revtraverse();
@@ -70,7 +70,22 @@ bool doubleleLinkedList::search(int rollNo, Node** previouse, Node** current) {
         *previouse = *current;
         *current = (*current)->next;
     }
-    return (*current != NULL)
+    return (*current != NULL);
+}
+
+bool doubleleLinkedList::deletNode(int rollNo) {
+    Node* previouse, *current;
+    previouse = current = NULL;
+    if (search(rollNo, &previouse, &current) == false)
+        return false;
+    if (current->next != NULL)
+        current->next->prev = previouse; //step 2
+    if (previouse != NULL)
+        previouse->next = current->next; //step 3
+    else
+        START = current->next;
+    delete current; //step 4
+    return true;
 }
 int main()
 {
