@@ -23,6 +23,14 @@ public:
     void hapus();
     void searchData();
 };
+void doubleleLinkedList::addNode() {
+    int nim;
+    string nm;
+    cout << "\n ENter teh roll nmber of the student: ";
+    cin >> nim;
+    cout << "\n enter the name of student: ";
+    cin >> nm;
+}
 
 int main()
 {
