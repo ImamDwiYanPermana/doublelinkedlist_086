@@ -152,7 +152,8 @@ void doubleleLinkedList::searchData() {
 }
 int main()
 {
-    std::cout << "Hello World!\n";
+    DoubleLinkedList obj;
+    while (true) {
 }
 
 
