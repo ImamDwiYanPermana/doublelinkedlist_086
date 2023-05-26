@@ -165,6 +165,29 @@ int main()
             cout << "\nEnter tour choice (1-6): ";
             char ch;
             cin >> ch;
+            switch (ch) {
+            case '1':
+                obj.addnode();
+                break;
+            case '2':
+                obj.hapus();
+                break;
+            case '3':
+                obj.traverse();
+                break;
+            case '4':
+                obj.revtraverse();
+                break;
+            case '5':
+                obj.searchData();
+                break;
+            case '6':
+                return 0;
+            default:
+                cout << "\nInvalid option" << endl;
+                break;
+            }
+        }
 }
 
 
