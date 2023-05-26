@@ -48,9 +48,20 @@ void doubleleLinkedList::addNode() {
         START = newNode; /// Step 6
         return;
     }
-
+    /*Inserting a node Between Two node in the list*/
+    Node* current = START; // 1.d
+    Node* previouse = NULL;// 1.b
+    while (current->next != NULL && nim == current->next->noMhs < nim)// step 1c
+    {
+        cout << "Duplicate roll number not allowed " << endl;
+        return;
+    }
+    newNode->next = current->next; // step 4
+    newNode -> prev = current; // step 5
+    if (current->next != NULL)
+        current->next->prev = newNode;//step 6
+    current->next = newNode;// step 7
 }
-
 int main()
 {
     std::cout << "Hello World!\n";
