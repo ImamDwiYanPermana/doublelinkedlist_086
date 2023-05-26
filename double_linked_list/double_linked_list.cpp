@@ -102,6 +102,13 @@ void doubleleLinkedList::traverse(){
         }
     }
 }
+void doubleleLinkedList::revtraverse
+    if (listEmpty()) {
+        cout << "\nList is empty" << endl;
+    }
+    else {
+        cout << "\nRecords in descending order of roll number are: " << endl;
+        node* currentnode = START;
 int main()
 {
     std::cout << "Hello World!\n";
