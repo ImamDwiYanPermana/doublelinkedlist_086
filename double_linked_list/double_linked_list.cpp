@@ -127,11 +127,16 @@ void doubleleLinkedList::hapus() {
     int rollNo;
     cin >> rollNo;
     cout << endl;
-    if (doubleleLinkedList::deletenode(rollNo) == false)
+    if (doubleleLinkedList::deletNode(rollNo) == false)
         cout << "Record not found" << endl;
     else
         cout << "Record with roll number " << rollNo << " deleted" << endl;
 }
+void doubleleLinkedList::searchData() {
+    if (listEmpty() == true) {
+        cout << "\nList is empty" << endl;
+
+    }
 int main()
 {
     std::cout << "Hello World!\n";
